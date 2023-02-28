@@ -1,0 +1,2 @@
+﻿# Récupère tous les processus svchost et affiche leur Id et leur nom et leur description
+Get-Process | Where-Object {$_.ProcessName -eq "svchost"} | Select-Object Id,ProcessName,Description | Format-Table -AutoSize
